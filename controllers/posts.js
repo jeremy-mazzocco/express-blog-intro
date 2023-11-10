@@ -1,7 +1,3 @@
-
-const express = require("express");
-const fs = require("fs");
-const path = require("path");
 const postsPath = require("../db/posts.json");
 
 function posts(req, res) {
@@ -50,7 +46,6 @@ function posts(req, res) {
     })
 
 }
-
 
 
 module.exports = {

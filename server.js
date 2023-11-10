@@ -17,7 +17,7 @@ dotenv.config();
 
 // Controllers
 const dashBoardController = require("./controllers/dashboard");
-const postConstroller = require("./conrollers/posts");
+const postConstroller = require("./controllers/posts");
 
 // Public folder
 app.use(express.static("public"));
