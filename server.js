@@ -6,9 +6,18 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 
+// Debugger
+// const debug = require('debug')('server.js');
+
+// app.use((req, res, next) => {
+//   debug('Request:', req.method, req.url);
+//   next();
+// });
+
+
 // Controllers
 const dashBoardController = require("./controllers/dashboard");
-const postConstroller = require("./controllers/posts");
+const postConstroller = require("./conrollers/posts");
 
 // Public folder
 app.use(express.static("public"));
