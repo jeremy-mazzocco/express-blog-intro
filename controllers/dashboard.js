@@ -16,14 +16,14 @@ function index(req, res) {
 
 
         html: () => {
-            // title
 
+            // title
             let headContent = fs.readFileSync(path.resolve(__dirname, "../views/header.html"), "utf-8");
             let htmlContent = fs.readFileSync(path.resolve(__dirname, "../views/index.html"), "utf-8");
 
             htmlContent = htmlContent.replace("@header", headContent);
+            
             const titleBlog = "Benvenuto nel mio blog!!"
-      
             htmlContent = htmlContent.replace("{{ titleBlog }}", titleBlog);
 
             res.type("html").send(htmlContent);

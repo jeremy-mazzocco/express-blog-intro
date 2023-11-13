@@ -6,6 +6,14 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 
+// Controllers
+const dashBoardController = require("./controllers/dashboard");
+const postConstroller = require("./controllers/posts");
+
+// Public folder
+app.use(express.static("public"));
+
+
 // Debugger
 // const debug = require('debug')('server.js');
 
@@ -15,19 +23,9 @@ dotenv.config();
 // });
 
 
-// Controllers
-const dashBoardController = require("./controllers/dashboard");
-const postConstroller = require("./controllers/posts");
-
-// Public folder
-app.use(express.static("public"));
-
-
 // Routes
 app.get("/", dashBoardController.index);
 app.get("/posts", postConstroller.posts);
-
-
 
 
 // Start the server

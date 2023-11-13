@@ -5,6 +5,7 @@ function posts(req, res) {
     res.format({
 
         html: () => {
+
             // title
             const html = ["<h1>I miei Posts</h1>"];
 
@@ -26,8 +27,9 @@ function posts(req, res) {
                 post.tags.forEach(tag => {
                     html.push(`${tag}<br>`);
                 });
+
                 html.push("</span>");
-                
+
             });
 
             html.push("</ul>");
